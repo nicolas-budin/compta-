@@ -11,16 +11,15 @@ Légende : `[ ]` à faire, `[~]` en cours, `[x]` validée.
 
 ## État
 
-- **Dernière itération validée** : 0, cadrage (documentation seule).
-- **Itération suivante** : 0 bis, squelette Maven, ou directement 1, plan comptable.
-- **Point en attente** : dépôt GitHub `compta` pas encore accessible depuis les sessions Claude.
+- **Dernière itération validée** : 0 bis, squelette Maven (sur la branche `wip/iteration-0bis`, pas encore sur `main`).
+- **Itération suivante** : 1, plan comptable.
 
 ## Itération 0 — Cadrage
 
 - [x] `CLAUDE.md` : but, fil rouge, rituel, règles comptables et de code.
 - [x] `docs/backlog.md` : ce fichier.
 - [x] `docs/glossaire.md` : vocabulaire français / allemand.
-- [ ] 0 bis : `pom.xml` Java 25 + JUnit 5, Maven Wrapper, un test vide qui passe.
+- [x] 0 bis : `pom.xml` Java 21 + JUnit, Maven Wrapper, un test vide qui passe.
 
 ## Itérations — Cabinet médical des Tilleuls Sàrl
 

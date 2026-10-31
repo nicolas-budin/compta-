@@ -44,12 +44,21 @@ Le backlog et l'état d'avancement sont dans [docs/backlog.md](docs/backlog.md).
 
 ## Règles de code
 
-- **Java 25**, Maven, JUnit 5. Le package est `ch.louhan.compta`.
+- **Java 21** (cible de compilation), Maven, JUnit (Jupiter). Le package est `ch.louhan.compta`.
 - **Java pur au départ** : pas de Spring ni de base de données avant que la comptabilité ne l'exige (vers l'itération 6). La plomberie technique ne doit pas masquer la comptabilité.
 - **Montants** : toujours `BigDecimal`, jamais `double`. Le montant et la devise sont regroupés dans un type dédié. Les arrondis sont explicites, y compris l'arrondi au 5 centimes du franc suisse.
 - **Types immuables** (`record`) pour les écritures et les montants.
 - **Tests** : chaque exercice fait à la main devient un test, avec les chiffres de l'exercice.
 - Noms du domaine en français (`Compte`, `Ecriture`, `Journal`, `Balance`), pour coller au vocabulaire comptable.
+
+## Commandes
+
+```bash
+./mvnw test    # compilation + tests
+```
+
+- **Toujours `./mvnw`**, jamais `mvn` : le wrapper fixe la version de Maven (3.9.16).
+- **Pourquoi Java 21** : les sessions cloud n'ont qu'un JDK 21, et le téléchargement d'un JDK plus récent y est bloqué. La cible est donc Java 21 partout, pour que le build soit vérifié de la même façon en local et dans le cloud. Un JDK 25 installé en local compile cette cible sans problème.
 
 ## Collaboration
 
