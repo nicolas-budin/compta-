@@ -8,6 +8,7 @@ Le vocabulaire est en français, avec le terme allemand utilisé dans Abacus et 
 | Comptabilité auxiliaire | Nebenbuchhaltung | Détail par tiers (débiteurs, créanciers). Alimente les comptes collectifs de la générale. |
 | Plan comptable | Kontenplan / Kontenrahmen | Liste structurée des comptes. En Suisse, le plan PME (Sterchi) est la référence pour les entreprises. |
 | Compte collectif | Sammelkonto | Compte de la générale qui regroupe tous les comptes auxiliaires d'une catégorie. |
+| Rubrique comptable | (pas de terme unique, selon le logiciel) | Terme ambigu. (1) Rubrique de présentation : regroupement de comptes dans le bilan ou le compte de résultat (classe, groupe, sous-groupe). (2) Rubrique de paramétrage : règle qui traduit une opération de l'auxiliaire ou d'un module métier (par exemple « consultation, tiers payant ») en comptes de la générale (compte collectif, compte de produit ou de charge, code TVA). (3) Rubrique de salaire (Lohnart) : élément de la fiche de paie. |
 | Débit / Crédit | Soll / Haben | Les deux côtés d'un compte. Chaque écriture a autant de débit que de crédit. |
 | Écriture | Buchung | Enregistrement d'une opération : date, pièce, libellé, lignes au débit et au crédit. |
 | Écriture collective | Sammelbuchung | Écriture à plusieurs lignes au débit ou au crédit. |

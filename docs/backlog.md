@@ -11,7 +11,7 @@ Légende : `[ ]` à faire, `[~]` en cours, `[x]` validée.
 
 ## État
 
-- **Dernière itération validée** : 0 bis, squelette Maven (sur la branche `wip/iteration-0bis`, pas encore sur `main`).
+- **Dernière itération validée** : 0 bis, squelette Maven (fusionnée sur `main`).
 - **Itération suivante** : 1, plan comptable.
 
 ## Itération 0 — Cadrage
@@ -32,7 +32,8 @@ Légende : `[ ]` à faire, `[~]` en cours, `[x]` validée.
 | [ ] 5 | **Écritures composées et pièces** : écriture collective, numéro de pièce, libellé | une facture fournisseur répartie sur plusieurs charges | une écriture à N lignes est acceptée si elle est équilibrée, et la numérotation est continue |
 | [ ] 6 | **Périodes et immuabilité** : verrouillage, contre-passation | corriger une erreur de janvier après le verrouillage du mois | aucune écriture n'est modifiée, et la correction passe par une extourne en février. Persistance PostgreSQL introduite ici |
 | [ ] 7 | **TVA** : codes TVA, part exonérée et part imposable, calcul automatique, décompte | une facture mixte (consultation exonérée + médicaments remis imposables) | l'écriture de TVA est générée automatiquement, et le décompte trimestriel est correct |
-| [ ] 8 | **Débiteurs (comptabilité auxiliaire)** : compte collectif, postes ouverts, lettrage, tiers garant et tiers payant | des factures patients et assureurs, des paiements partiels, un rappel | le solde du compte collectif est égal à la somme des postes ouverts |
+| [ ] 8a | **Débiteurs et rubriques comptables** : compte de tiers, compte collectif, postes ouverts, rubriques qui traduisent une ligne de facture en écriture de la générale (compte collectif, compte de produit, code TVA) | des factures patients (1100) et assureurs (1105), avec des lignes de consultation et de médicaments | l'écriture de la générale est générée à partir de la facture via les rubriques, la saisie manuelle sur un compte collectif est refusée, et le solde de chaque compte collectif est égal à la somme des postes ouverts |
+| [ ] 8b | **Lettrage et rappels** : paiement, lettrage, paiement partiel, tiers garant et tiers payant, rappel | des paiements complets et partiels de patients et d'assureurs, un rappel | chaque paiement est lettré avec sa facture, les postes ouverts restants sont corrects, et le collectif reste égal à l'auxiliaire |
 | [ ] 9 | **Créanciers** : factures fournisseurs, échéances, paiements | des factures de laboratoire et de fournisseur de matériel, avec escompte | les postes ouverts créanciers sont rapprochés avec le grand livre |
 | [ ] 10 | **Banque** : QR-facture, import `camt.053`, rapprochement bancaire | un relevé bancaire de février | les paiements reçus sont lettrés automatiquement avec les postes ouverts |
 | [ ] 11 | **Bouclement** : amortissements, transitoires, report du résultat, ouverture de l'exercice suivant | le bouclement au 31 décembre | les comptes de résultat sont soldés, et le bilan d'ouverture N+1 est égal au bilan de clôture N |
